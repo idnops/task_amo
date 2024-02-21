@@ -18,7 +18,7 @@ export const useSort = () => {
       state.sort = item;
       let res = null;
       table.toggleStatus();
-      if (state.value === 0) {
+      if (state.limit.value === 0) {
         res = await getAll();
       } else {
         res = await getLeads(state.limit.value);
